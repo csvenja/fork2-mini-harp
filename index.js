@@ -8,6 +8,12 @@ var makeLess = require('./lib/processor/less');
 module.exports = function (path) {
 	var app = connect();
 	app.use(function (req, res, next) {
+		if (req.url === '/') {
+			req.url = '/index.html';
+		}
+		next();
+	});
+	app.use(function (req, res, next) {
 		if (req.url === '/current-time') {
 			res.end((new Date()).toISOString() + '\n');
 		} else {
