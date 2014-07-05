@@ -4,7 +4,7 @@
   "description": "Mini Harp static server.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "author": "Svenja Cao",
   "license": "MIT",
@@ -13,7 +13,13 @@
   },
   "dependencies": {
     "connect": "^3.0.1",
+    "jade": "^1.3.1",
     "minimist": "^0.2.0",
     "serve-static": "^1.3.0"
+  },
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "mocha": "^1.20.1",
+    "supertest": "^0.13.0"
   }
 }
